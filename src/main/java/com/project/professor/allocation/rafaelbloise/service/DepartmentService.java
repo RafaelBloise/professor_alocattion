@@ -66,7 +66,9 @@ public class DepartmentService {
         return department;
     }
 	 
-	
+    public List<Department> findAll() {
+		return departmentRepository.findAll();
+	}
 	
 	
 	

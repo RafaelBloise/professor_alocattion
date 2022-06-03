@@ -66,5 +66,9 @@ public class CourseService {
 
         return course;
     }
+    
+    public List<Course> findAll() {
+		return courseRepository.findAll();
+	}
 	
 }

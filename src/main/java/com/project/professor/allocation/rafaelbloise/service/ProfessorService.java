@@ -77,6 +77,9 @@ public class ProfessorService {
         return professor;
     }
 	
-	
+    public List<Professor> findAll() {
+		return professorRepository.findAll();
+	}
+
 	
 }

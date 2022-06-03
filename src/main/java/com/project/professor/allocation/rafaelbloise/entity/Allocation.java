@@ -17,6 +17,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -33,10 +34,12 @@ public class Allocation {
 	@Column(name = "day", nullable = false)
 	private DayOfWeek dayOfWeek;
 
+	@JsonFormat(pattern = "HH:mmZ")
 	@Temporal(TemporalType.TIME)
 	@Column(name = "start", nullable = false)
 	private Date startHour;
 
+	@JsonFormat(pattern = "HH:mmZ")
 	@Temporal(TemporalType.TIME)
 	@Column(name = "end_hour", nullable = false)
 	private Date endHour;
